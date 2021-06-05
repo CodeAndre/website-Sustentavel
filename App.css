@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #00365A;
+    padding: 2rem;
+    z-index: 999;
+}
+
+/*====== NAV ======*/
+.nav {
+    max-width: 1144px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav__item {
+    float: left;
+    padding: 0 9px 1px 12px;
+
+    border-right: 1px solid beige;
+}
+.nav__item:last-child{
+    border: none;
+}
+.icon {
+    color: bisque;
+    font-size: 1.4rem;
+    margin: -2px 0px 0px -12px;
+    cursor: pointer;
+}
+
+.nav__logo{
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.nav__link, .nav__logo {
+    color: whitesmoke;
+}
+
+/*====== NAV MOBILE ======*/
+@media screen and (max-width: 782px) {
+
+    .nav__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        background-color: #00365A ;
+        transition: .4s;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 1rem 1rem;
+        z-index: 999;
+    }
+    .nav__item {
+        float: none;
+        padding: 12px;
+
+        border: none;
+
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 2rem;
+        margin-top: 0px;
+    }
+    .nav__item:last-child{
+        display: none;
+    }
+    .nav__link {
+        font-size: 1.4rem;
+    }
+    .nav__logo{
+        margin-left: 12px;
+        font-size: 2rem;
+    }
+
+    .nav__toggle {
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: antiquewhite;
+    }
+    
+    .combustivel {
+        height: 220px;
+    }   
+    .banner_2 {
+       height: 100vh;
+    }
+    
+    
+}
+/*====== SHOW NAV MOBILE ======*/
+.show-menu {
+    top: 4rem;
+}
+
+
+/*====== MAin ======*/
+img {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    max-width: 1280px;
+}
+
+.banner {
+    position: relative;
+    top: 6rem;
+    z-index: 7;
+}
+.banner_2 {
+    position: relative;
+    top: -2px;
+}
+
+@media screen and (min-width: 782px) {
+
+    .nav__toggle {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 564px) {
+    .combustivel {
+        height: 140px;
+    }
+    .banner_2 {
+        height: 100vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsivo*/
+@media  screen and (min-width: 960px) {
+    
+}
+
+@media  screen and (min-width: 768px) {
+    
+}
+
+@media  screen and (min-width: 576px) {
+    
+}
+/*@media(min-width:700px){
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .pic-1 {
+        top: 0;
+        left: 0;
+    }
+
+}*/
