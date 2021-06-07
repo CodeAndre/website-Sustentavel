@@ -7,6 +7,13 @@
 body {
     font-family: "Montserrat", sans-serif;
     max-width: 1280px;
+    margin: 0 auto;
+    background-color: #153b54;
+}
+
+main {
+    display: block;
+    margin: 0 auto;
 }
 
 h1, h2, h3, p, ul {
@@ -35,7 +42,6 @@ header {
 
 /*====== NAV ======*/
 .nav {
-    max-width: 1144px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -45,7 +51,6 @@ header {
 .nav__item {
     float: left;
     padding: 0 9px 1px 12px;
-
     border-right: 1px solid beige;
 }
 .nav__item:last-child{
@@ -101,16 +106,18 @@ p.title_1 {
 
     width: 330px;
     padding: 12px;
-    margin: 0 auto;
+    margin: 30px auto;
 
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 32px;
     z-index: 3;
 
-    top: -37rem;
 
     background-color: rgba(20, 20, 21, 0.25);
     border-radius: 12px;
 
+    transform: translateX(-50%);
 }
 .title_2 {
     font-size: 2.4rem;
@@ -121,7 +128,15 @@ p.title_1 {
     color: aliceblue;
 }
 
-
+.banner__2 {
+    position: relative;
+    background-color: bisque;
+    height: 0px;
+    margin: 0 auto;
+}
+.main_container {
+    margin: 0 auto;
+}
 
 /*====== NAV MOBILE ======*/
 @media screen and (max-width: 782px) {
@@ -190,9 +205,8 @@ img {
     
     object-fit: cover;
     max-width: 1280px;
-
-    position: absolute;
 }
+
 
 .banner_1 {
     position: relative;
@@ -201,8 +215,7 @@ img {
 }
 .banner_2 {
     position: relative;
-    top: -2px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -211,85 +224,73 @@ img {
 
 @media screen and (max-width: 550px) {
     .container.text_1 {
-        top: -5rem;
+        top: -6rem;
+        margin-right: 4px;
     }
-
 }
 
 @media screen and (min-width: 588px) {
    .container.text_1 {
        grid-gap: 10rem;
    }
-    
+   .text_2 {
+    font-size: 1.4rem;
+    width: 600px;
+}
 }
 
-@media screen and (min-width: 782px) {
+@media screen and (min-width:782px) {
+    .container.text_1 {
+        top: -4rem;
+        grid-gap: 12rem;
+    }
+    
+    .title_1, .subtitle_1 {
+        font-size: 1.4rem;
+    }
+    
+    .banner_2 {
+        top: -6rem;
+    }
 
     .nav__toggle {
         display: none;
     }
+
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsivo*/
-@media  screen and (min-width: 960px) {
-    
-}
-
-@media  screen and (min-width: 768px) {
-    
-}
-
-@media  screen and (min-width: 576px) {
-    
-}
-/*@media(min-width:700px){
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-    .pic-1 {
-        top: 0;
-        left: 0;
+@media screen and (min-width: 960px) {
+    .container.text_1 {
+        top: -5rem;
+        grid-gap: 12rem;
     }
 
-}*/
+    .title_1, .subtitle_1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .container.text_1 {
+        top: -6rem;
+        grid-gap: 13rem;
+    }
+
+    .title_1, .subtitle_1 {
+        font-size: 1.7rem;
+    }
+
+}
+
+
+@media screen and (min-width: 1440px) {
+    .container.text_1 {
+        top: -7rem;
+        grid-gap: 13rem;
+    }
+
+    .title_1, .subtitle_1 {
+        font-size: 1.9rem;
+    }
+
+}
